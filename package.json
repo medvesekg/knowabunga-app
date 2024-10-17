@@ -1,0 +1,21 @@
+{
+  "name": "knowabunga-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "aws:synth": "pnpm --filter aws cdk synth",
+    "aws:deploy:dev": "pnpm --filter aws deploy:dev",
+    "frontend:dev": "pnpm --filter frontend dev",
+    "frontend:build": "pnpm --filter fronend build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12"
+  }
+}

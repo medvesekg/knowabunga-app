@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 14px;
+  font-family: "Sora";
+  background: rgb(var(--color-background));
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@layer base {
+  :root {
+    --color-primary: 29 46 140;
+    --color-secondary: 4 216 102;
+    --color-text-primary: 226 227 222;
+    --color-text-secondary: 156 156 156;
+    --color-background: 4 6 13;
+    --color-background-secondary: 76 76 76;
+    --color-success: 04 216 102;
+    --color-danger: 220 53 69;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgb(var(--color-primary) / 0);
+  }
+
+  40% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgb(var(--color-primary) / 0);
+  }
+
+  80% {
+    transform: scale(1);
+    box-shadow: 0 0 0px 10px rgb(var(--color-primary) / 0.3);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgb(var(--color-primary) / 0);
+  }
+}
+
+@keyframes slide-in-from-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.spin {
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+body {
+  color: rgb(var(--color-text-primary));
+}
+
+* {
+  transition: background-color ease-in-out 0.5s;
+}
+
+.slide-in-from-left {
+  animation: slide-in-from-left 0.5s;
+}
+
+.slide-in-from-right {
+  animation: slide-in-from-right 0.5s;
+}
+
+.fade-in {
+  animation: fade-in 0.5s;
+}
+
+.fade-in-quick {
+  animation: fade-in 0.2s;
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+.speech-bubble {
+  position: relative;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: rgb(var(--color-background-secondary));
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: 0px;
+  margin-left: -10px;
+}
+
+.user-menu-bubble {
+  position: relative;
+}
+
+.user-menu-bubble:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom-color: rgb(var(--color-background));
+  border-top: 0;
+  border-left: 0;
+  margin-left: -10px;
+  margin-top: -20px;
+}
+
+.users-table {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
