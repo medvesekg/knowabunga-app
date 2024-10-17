@@ -19,7 +19,9 @@ export default function ItemAvatar({
       className={classNames("rounded-full", className)}
       style={{
         ...style,
-        background: `url(${item.image}) no-repeat center center, rgb(var(--color-background-secondary))`,
+        background: `url(${item.image.url}) no-repeat center ${
+          item.image.verticalAlignment || "center"
+        }, rgb(var(--color-background-secondary))`,
         backgroundSize: "cover",
       }}
       title={title}

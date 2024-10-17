@@ -43,28 +43,28 @@ export interface Schedule {
 
 export type ScheduleItem = ScheduleItemTalk | ScheduleItemBreak;
 
-export interface ScheduleItemTalk {
+interface ScheduleItemCommon {
   id: string;
   title: string;
-  description: string;
   from: string;
   to: string;
   location?: string;
-  image: string;
-  speakers: Speaker[];
-  type: "talk";
-  tags: string[];
+  image: {
+    url: string;
+    verticalAlignment?: string;
+  };
 }
 
-export interface ScheduleItemBreak {
-  id: string;
-  title: string;
-  from: string;
-  to: string;
-  location?: string;
-  image: string;
+export type ScheduleItemTalk = ScheduleItemCommon & {
+  description: string;
+  speakers: Speaker[];
+  tags: string[];
+  type: "talk";
+};
+
+export type ScheduleItemBreak = ScheduleItemCommon & {
   type: "break";
-}
+};
 
 export interface ScheduleItemWithRegionTalk extends ScheduleItemTalk {
   region_id: string;

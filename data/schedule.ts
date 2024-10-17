@@ -12,7 +12,7 @@ import { Schedule } from "./types";
     from: "2024-10-03 08:00:00",
     to: "2024-10-03 08:30:00",
     location: "Some location",
-    image: "imageurl"
+    image:{url: "http://image.url/img.png"}
     type: "break"
  },
 {
@@ -22,7 +22,7 @@ import { Schedule } from "./types";
    from: "2024-10-03 08:45:00",
    to: "2024-10-03 09:30:00",
    location: "Some location",
-   image: "imageurl"
+   image:{url: "http://image.url/img.png"},
    speakers: [{
     name: "Fakeman McDeveloper",
     email: "fakeman.mcdeveloper@faang.com"
@@ -47,7 +47,7 @@ const schedule: Schedule = {
         to: "2024-10-18T15:00:00+02:00",
         type: "break",
         title: "FIKA",
-        image: "/img/fika.jpg",
+        image: { url: "/img/fika.jpg" },
       },
       {
         id: "or-2024-1",
@@ -55,7 +55,7 @@ const schedule: Schedule = {
         to: "2024-10-18T15:10:00+02:00",
         type: "break",
         title: "Introduction & Welcome",
-        image: "/img/welcome.jpg",
+        image: { url: "/img/welcome.jpg" },
       },
       {
         id: "or-2024-2",
@@ -64,7 +64,9 @@ const schedule: Schedule = {
         type: "talk",
         title: "Boomer talk - aging in the tech industry",
         description: "",
-        image: "https://i.1337co.de/wallofleet/per-okvist",
+        image: {
+          url: "https://i.1337co.de/wallofleet/per-okvist",
+        },
         tags: ["Tales from the Field"],
         speakers: [
           {
@@ -80,7 +82,10 @@ const schedule: Schedule = {
         type: "talk",
         title: "How (not) to learn languages",
         description: "",
-        image: "https://i.1337co.de/wallofleet/stanislav-kolbasin",
+        image: {
+          url: "https://i.1337co.de/wallofleet/stanislav-kolbasin",
+          verticalAlignment: "top",
+        },
         tags: ["Tales from the Field", "Engineering & Technical"],
         speakers: [
           {
@@ -96,7 +101,9 @@ const schedule: Schedule = {
         type: "talk",
         title: "Pitch Perfect - Engaging Clients Through Effective Pitching",
         description: "",
-        image: "https://i.1337co.de/wallofleet/my-hiller",
+        image: {
+          url: "https://i.1337co.de/wallofleet/my-hiller",
+        },
         tags: ["Workshop"],
         speakers: [
           {
@@ -112,7 +119,10 @@ const schedule: Schedule = {
         type: "talk",
         title: "Why teamwork is hard",
         description: "",
-        image: "https://i.1337co.de/wallofleet/karl-adriansson",
+        image: {
+          url: "https://i.1337co.de/wallofleet/karl-adriansson",
+          verticalAlignment: "top",
+        },
         tags: ["Leadership and interpersonal skills"],
         speakers: [
           {
@@ -128,7 +138,9 @@ const schedule: Schedule = {
         type: "talk",
         title: "Technical debt and the all-round benefits of refactoring",
         description: "",
-        image: "https://i.1337co.de/wallofleet/tshepiso-lehutjo",
+        image: {
+          url: "https://i.1337co.de/wallofleet/tshepiso-lehutjo",
+        },
         tags: ["Tales from the Field", "Engineering & Technical"],
         speakers: [
           {
@@ -144,7 +156,9 @@ const schedule: Schedule = {
         type: "talk",
         title: "FAIL! (Tales from the trenches)",
         description: "",
-        image: "https://i.1337co.de/wallofleet/johan-olsson",
+        image: {
+          url: "https://i.1337co.de/wallofleet/johan-olsson",
+        },
         tags: ["Tales from the Field"],
         speakers: [
           {
@@ -159,7 +173,7 @@ const schedule: Schedule = {
         to: "2024-10-18T20:00:00+02:00",
         type: "break",
         title: "Dinner",
-        image: "/img/dinner.jpg",
+        image: { url: "/img/dinner.jpg" },
       },
       {
         id: "or-2024-8",
@@ -167,7 +181,7 @@ const schedule: Schedule = {
         to: "2024-10-18T24:00:00+02:00",
         type: "break",
         title: "GAMES n PARTY",
-        image: "/img/games.jpg",
+        image: { url: "/img/games.jpg" },
       },
     ],
   },
@@ -180,7 +194,7 @@ const schedule: Schedule = {
         to: "2024-10-18T15:15:00+02:00",
         type: "break",
         title: "Introduction & Welcome",
-        image: "/img/welcome.jpg",
+        image: { url: "/img/welcome.jpg" },
       },
       {
         id: "lj-2024-2",
@@ -190,7 +204,9 @@ const schedule: Schedule = {
         title: "What the #HEX is an OKLCH?!",
         description:
           "Let's talk about new CSS colour functions, colour spaces, and colour gamuts",
-        image: "https://i.1337co.de/profile/tomaz-kenda",
+        image: {
+          url: "https://i.1337co.de/profile/tomaz-kenda",
+        },
         tags: ["Engineering & Technical"],
         speakers: [
           {
@@ -207,7 +223,9 @@ const schedule: Schedule = {
         title: "How Unseen Biases Shape Our Work in Software Teams",
         description:
           "We'll explore how certain cognitive and social psychology biases can distort our judgement and influence how we see ourselves, our teammates, and our work. We will reflect on how these biases affect team collaboration and decision-making. Self-reflection is important to recognize these patterns and improve teamwork and communication.",
-        image: "https://i.1337co.de/wallofleet/nera-bozin",
+        image: {
+          url: "https://i.1337co.de/wallofleet/nera-bozin",
+        },
         tags: ["Leadership and interpersonal skills"],
         speakers: [
           {
@@ -224,7 +242,9 @@ const schedule: Schedule = {
         title: "Building AWS Infrastructure for Career Progression Framework",
         description:
           "Technical overview of AWS architecture design for the Career Progression Framework. Covers key decisions, challenges, and cloud infrastructure implementation.",
-        image: "https://i.1337co.de/profile/vid-cufar",
+        image: {
+          url: "https://i.1337co.de/profile/vid-cufar",
+        },
         tags: ["Engineering & Technical"],
         speakers: [
           {
@@ -239,7 +259,7 @@ const schedule: Schedule = {
         to: "2024-10-18T17:20:00+02:00",
         type: "break",
         title: "FIKA",
-        image: "/img/fika.jpg",
+        image: { url: "/img/fika.jpg" },
       },
       {
         id: "lj-2024-3",
@@ -248,7 +268,9 @@ const schedule: Schedule = {
         type: "talk",
         title: "How to nail the client meeting",
         description: `In the TA team we created a workshop on the client meeting. The workshop consists of 2 interactive parts, that is pitching yourself and your proudest profesional achievements and showing interest about the client you are talking to. Join us for this exciting adventure and perhaps next time you'll be asked "Tell me about yourself", things will be a bit easier.`,
-        image: "https://i.1337co.de/wallofleet/eva-sever",
+        image: {
+          url: "https://i.1337co.de/wallofleet/eva-sever",
+        },
         tags: ["Leadership and interpersonal skills"],
         speakers: [
           {
@@ -265,7 +287,7 @@ const schedule: Schedule = {
         title: "How far is Nebotičnik?",
         description:
           "What are the challenges of navigating urban areas? Is Google Maps the best we can do for pedestrians? Can you really walk from anywhere to anywhere? Let's find out!",
-        image: "https://i.1337co.de/wallofleet/wiktor-chojnacki",
+        image: { url: "https://i.1337co.de/wallofleet/wiktor-chojnacki" },
         tags: ["Engineering & Technical"],
         speakers: [
           {
@@ -280,7 +302,7 @@ const schedule: Schedule = {
         to: "2024-10-18T20:00:00+02:00",
         type: "break",
         title: "Dinner",
-        image: "/img/dinner.jpg",
+        image: { url: "/img/dinner.jpg" },
       },
       {
         id: "lj-2024-9",
@@ -288,7 +310,7 @@ const schedule: Schedule = {
         to: "2024-10-18T24:00:00+02:00",
         type: "break",
         title: "GAMES n PARTY",
-        image: "/img/games.jpg",
+        image: { url: "/img/games.jpg" },
       },
     ],
   },
@@ -301,7 +323,7 @@ const schedule: Schedule = {
         to: "2024-10-18T15:15:00+02:00",
         type: "break",
         title: "Introduction & Welcome",
-        image: "/img/welcome.jpg",
+        image: { url: "/img/welcome.jpg" },
       },
       {
         id: "bo-2024-2",
@@ -311,7 +333,7 @@ const schedule: Schedule = {
         title: "Storytime: Coor",
         description:
           "The digital transition from a mobile app to a PWA and how we have helped Coor harmonize its offering for its customers.",
-        image: "https://i.1337co.de/wallofleet/klas-broberg",
+        image: { url: "https://i.1337co.de/wallofleet/klas-broberg" },
         tags: ["Tales from the Field"],
         speakers: [
           {
@@ -326,7 +348,7 @@ const schedule: Schedule = {
         to: "2024-10-18T16:30:00+02:00",
         type: "break",
         title: "FIKA",
-        image: "/img/fika.jpg",
+        image: { url: "/img/fika.jpg" },
       },
       {
         id: "bo-2024-4",
@@ -336,7 +358,9 @@ const schedule: Schedule = {
         title: "Game Dev as a enterprise developer",
         description:
           "Game development as a enterprise developer, a talk about how things are different when you're developing games and the shortcuts you need to take to push forward.",
-        image: "https://i.1337co.de/wallofleet/thomas-brunstrom",
+        image: {
+          url: "https://i.1337co.de/wallofleet/thomas-brunstrom",
+        },
         tags: ["Engineering & Technical"],
         speakers: [
           {
@@ -351,7 +375,7 @@ const schedule: Schedule = {
         to: "2024-10-18T18:00:00+02:00",
         type: "break",
         title: "Tech mingle",
-        image: "/img/tech.jpg",
+        image: { url: "/img/tech.jpg" },
       },
       {
         id: "bo-2024-6",
@@ -359,7 +383,7 @@ const schedule: Schedule = {
         to: "2024-10-18T19:00:00+02:00",
         type: "break",
         title: "Dinner",
-        image: "/img/dinner.jpg",
+        image: { url: "/img/dinner.jpg" },
       },
       {
         id: "bo-2024-7",
@@ -367,7 +391,7 @@ const schedule: Schedule = {
         to: "2024-10-18T24:00:00+02:00",
         type: "break",
         title: "GAMES n PARTY",
-        image: "/img/games.jpg",
+        image: { url: "/img/games.jpg" },
       },
     ],
   },
@@ -380,7 +404,7 @@ const schedule: Schedule = {
         to: "2024-10-18T15:10:00+02:00",
         type: "break",
         title: "Introduction & Welcome",
-        image: "/img/welcome.jpg",
+        image: { url: "/img/welcome.jpg" },
       },
       {
         id: "st-2024-2",
@@ -390,7 +414,10 @@ const schedule: Schedule = {
         title: "What does my code do?",
         description:
           'Every developer asks themselves, "What does this code do?" This talk will take you through my personal journey of figuring out the answer, starting from the basics of using print statements to more advanced debugging techniques. Along the way, you’ll likely recognize your own experiences. But what if we change the question to, "What should my code do?" That’s where Test Driven Development (TDD) comes into play. Join me to explore how TDD transforms the way we approach code, shifting from reactive troubleshooting to proactive design.',
-        image: "https://i.1337co.de/wallofleet/jimmy-mattsson",
+        image: {
+          url: "https://i.1337co.de/wallofleet/jimmy-mattsson",
+          verticalAlignment: "top",
+        },
         tags: ["Engineering & Technical"],
         speakers: [
           {
@@ -408,7 +435,9 @@ const schedule: Schedule = {
           "How to gain a accessibility mindset & speedrun [any% blindfolded] ordering ham",
         description:
           "The talk will consist of me describing how in my previous assignment we gained a accessibility mindset. This will be a story about how it started as a uphill battle but the outcome was that us developer pushed accessibility more than our po:s.",
-        image: "https://i.1337co.de/wallofleet/nikki-sollid",
+        image: {
+          url: "https://i.1337co.de/wallofleet/nikki-sollid",
+        },
         tags: ["Engineering & Technical"],
         speakers: [
           {
@@ -424,7 +453,9 @@ const schedule: Schedule = {
         type: "talk",
         title: "Pitch Perfect - Engaging Clients Through Effective Pitching",
         description: "",
-        image: "https://i.1337co.de/wallofleet/anna-bohman",
+        image: {
+          url: "https://i.1337co.de/wallofleet/anna-bohman",
+        },
         tags: ["Workshop"],
         speakers: [
           {
@@ -445,7 +476,7 @@ const schedule: Schedule = {
         title: "So you were thrown into a legacy project",
         description:
           "How to swim and not sink when you've been thrown into a messy legacy project with lots of technical debt, with examples from .NET",
-        image: "https://i.1337co.de/wallofleet/helen-toomik",
+        image: { url: "https://i.1337co.de/wallofleet/helen-toomik" },
         tags: ["Engineering & Technical", "Tales from the Field"],
         speakers: [
           {
@@ -460,7 +491,7 @@ const schedule: Schedule = {
         to: "2024-10-18T17:30:00+02:00",
         type: "break",
         title: "FIKA",
-        image: "/img/fika.jpg",
+        image: { url: "/img/fika.jpg" },
       },
       {
         id: "st-2024-7",
@@ -470,7 +501,7 @@ const schedule: Schedule = {
         title: "Yes, AI Content Creation Is Actually This Easy",
         description:
           "Do you like cocktails? Yes. Do you like AI? Maybe, maybe not, but today we’ll take a quick look at how easy it is to create drink recipes for an iOS app with a couple of lines of code using “AI magic”.",
-        image: "https://i.1337co.de/wallofleet/fredric-bohlin",
+        image: { url: "https://i.1337co.de/wallofleet/fredric-bohlin" },
         tags: ["Engineering & Technical"],
         speakers: [
           {
@@ -488,7 +519,9 @@ const schedule: Schedule = {
           "How to manage chaos - thoughts from parental leave, and some analogues to developer life",
         description:
           "When working as a developer, we face chaos all the time: ever changing requirements, emergency fixes, ancient codebase, collaboration issues with other devs... While on parental leave, I realised that I had it easy. Constantly beaten up and dragging through, I gradually realised that there are certain patterns to follow, and little by little I learnt a thing or two, created some routines/guidelines, which are surprisingly relatable to our line of work as developers.",
-        image: "https://i.1337co.de/wallofleet/xun-yang",
+        image: {
+          url: "https://i.1337co.de/wallofleet/xun-yang",
+        },
         tags: [
           "Engineering & Technical",
           "Leadership and interpersonal skills",
@@ -509,7 +542,10 @@ const schedule: Schedule = {
         title: "DNS piracy, sailing the digital seas",
         description:
           "Uncovering how dns is used in ad attribution and is it possible to pirate them?",
-        image: "https://i.1337co.de/wallofleet/johan-damm",
+        image: {
+          url: "https://i.1337co.de/wallofleet/johan-damm",
+          verticalAlignment: "top",
+        },
         tags: ["Engineering & Technical", "Tales from the Field"],
         speakers: [
           {
@@ -524,7 +560,7 @@ const schedule: Schedule = {
         to: "2024-10-18T20:00:00+02:00",
         type: "break",
         title: "Dinner",
-        image: "/img/dinner.jpg",
+        image: { url: "/img/dinner.jpg" },
       },
       {
         id: "st-2024-11",
@@ -532,7 +568,7 @@ const schedule: Schedule = {
         to: "2024-10-18T24:00:00+02:00",
         type: "break",
         title: "GAMES n PARTY",
-        image: "/img/games.jpg",
+        image: { url: "/img/games.jpg" },
       },
     ],
   },
