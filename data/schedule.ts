@@ -136,8 +136,10 @@ const schedule: Schedule = {
         from: "2024-10-18T17:30:00+02:00",
         to: "2024-10-18T18:10:00+02:00",
         type: "talk",
-        title: "Technical debt and the all-round benefits of refactoring",
-        description: "",
+        title:
+          "The state of the digital divide. How we can all be digital allies",
+        description:
+          "I believe digital equity goes hand in hand with digital accessibility. During the talk we will discuss what the digital divide is, what the future looks like in terms of digital disparities and what role professionals in tech can play to bridge the divide.",
         image: {
           url: "https://i.1337co.de/wallofleet/tshepiso-lehutjo",
         },
