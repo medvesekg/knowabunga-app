@@ -63,7 +63,8 @@ const schedule: Schedule = {
         to: "2024-10-18T15:50:00+02:00",
         type: "talk",
         title: "Boomer talk - aging in the tech industry",
-        description: "",
+        description:
+          "A short talk, reflecting on the last 25 years in the industry. What changed, what remains the same? Is it a young mans game?",
         image: {
           url: "https://i.1337co.de/wallofleet/per-okvist",
         },
@@ -81,7 +82,8 @@ const schedule: Schedule = {
         to: "2024-10-18T16:30:00+02:00",
         type: "talk",
         title: "How (not) to learn languages",
-        description: "",
+        description:
+          "At different times, I tried to learn too many languages for this to be healthy. With very modest success. I can describe (some of) those experiences, and we can laugh at me together.",
         image: {
           url: "https://i.1337co.de/wallofleet/stanislav-kolbasin",
           verticalAlignment: "top",
@@ -118,7 +120,8 @@ const schedule: Schedule = {
         to: "2024-10-18T17:30:00+02:00",
         type: "talk",
         title: "Why teamwork is hard",
-        description: "",
+        description:
+          "I firmly believe that working with people who think differently from me will make us more successful, as we have different perspectives. However, other perspectives tend to come with friction and frustration, as we don’t have the same way of thinking. During this session, I will share some tips and tricks to use as a team member when frustration builds up when working with others…",
         image: {
           url: "https://i.1337co.de/wallofleet/karl-adriansson",
           verticalAlignment: "top",
@@ -157,7 +160,8 @@ const schedule: Schedule = {
         to: "2024-10-18T19:00:00+02:00",
         type: "talk",
         title: "FAIL! (Tales from the trenches)",
-        description: "",
+        description:
+          "Stories about projects that failed in curious and unexpected ways.",
         image: {
           url: "https://i.1337co.de/wallofleet/johan-olsson",
         },
