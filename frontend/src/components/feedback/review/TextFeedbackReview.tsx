@@ -23,7 +23,11 @@ export default function TextFeedbackReview({
       <div>
         {values.map((item, i) => (
           <div key={i} className="flex gap-5 mb-8">
-            <UserAvatar picture={item.user.picture} size={8} />
+            <UserAvatar
+              picture={item.user.picture}
+              size={8}
+              className="flex-none"
+            />
             <div className="bg-background-secondary p-2 rounded-xl text-sm grow speech-bubble">
               <div className="text-sm mb-3">"{item.value}"</div>
 
