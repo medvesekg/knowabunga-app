@@ -170,7 +170,7 @@ async function getUserRegion(email: string) {
   };
 
   let leetApiUserData = await fetchLeetApiUserData(process.env.LEET_API_TOKEN);
-  let leetApiUser = leetApiUserData.find((user) => user.email === email);
+  let leetApiUser = leetApiUserData?.find((user) => user.email === email);
   let office = leetApiUser?.office?.toLowerCase();
 
   return isKeyOf(office, officeRegionMap) ? officeRegionMap[office] : "";
