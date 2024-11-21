@@ -19,6 +19,7 @@ import { Toaster } from "react-hot-toast";
 import TalkFeedbackNotifier from "./components/TalkFeedbackNotifier";
 import NotificationPermissionsNagger from "./components/NotificationPermissionsNagger";
 import UsersPage from "@/pages/UsersPage";
+import MyFeedbackLoader from "./components/MyFeedbackLoader";
 
 export default [
   {
@@ -44,25 +45,14 @@ export default [
           <AuthMiddleware>
             <Outlet />
             <TalkFeedbackNotifier />
+            <MyFeedbackLoader />
           </AuthMiddleware>
         ),
         loader: async () => {
           const user = store.getState().auth.user;
 
           if (user && user.email) {
-            try {
-              getMyFeedback().then((response) => {
-                store.dispatch(setFeedback(keyBy(response, "talk_id")));
-              });
-              return null;
-            } catch (e) {
-              if (e instanceof AxiosError) {
-                apiErrorHandler(e);
-                if (e?.response?.status === 401) {
-                  return redirect("/login");
-                }
-              }
-            }
+            return null;
           }
 
           return redirect("/login");
